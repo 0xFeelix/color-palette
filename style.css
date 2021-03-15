@@ -1,0 +1,303 @@
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main styles */
+
+body{
+	color: #818286;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #47A846;
+}
+/* Divider */
+.divider{
+	position: absolute;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: #47A846;
+}
+
+.color-palette{
+	position: relative;
+	width: 200px;
+	background: #fff;
+	padding: 10px 20px;
+	margin: 20px;
+	border-radius: 10px;
+}
+/* Palette header */
+.palette-header{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.palette-header h3, .palette-colors h3{
+	font-weight: bold;
+	font-size: 15px;
+}
+.palette-header i{
+	color: #E0E1E5;
+	font-weight: 400;
+	transform: rotate(90deg);
+	cursor: pointer;
+	transition: .3s ease-in-out;
+}.palette-header i:hover{
+	color: #47A846;
+}
+/* Palette colors */
+.palette-colors{
+	margin-top: 30px;
+	display: none;
+}
+.palette-colors ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.palette-colors li{
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 5px 5px 5px 0;
+	cursor: pointer;
+}
+.current-color:before{
+	content: '';
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	left: -3px;
+	top: -3px;
+	border: 2px solid #47A846;
+}
+
+/* Toggle menu */
+.active-palette{
+	display: block;
+}
+
+
+/* Skin transition */
+.skin-background{
+	transition: .4s ease-in-out;
+}
+
+
+/* Colors */
+
+/* green */
+[data-color='green']{
+	background-color: #47A846;
+}
+[data-default-color='green'] .skin-background{
+	background: #47A846;
+}
+[data-default-color='green'] .divider{
+	background: #47A846;
+}
+[data-default-color='green'] .palette-header i:hover{
+	color: #47A846;
+}
+[data-default-color='green'] .palette-colors li::before{
+	border: 2px solid #47A846;
+}
+/* grey */
+[data-color='grey']{
+	background-color: #6C757D;
+}
+[data-default-color='grey'] .skin-background{
+	background: #6C757D;
+}
+[data-default-color='grey'] .divider{
+	background: #6C757D;
+}
+[data-default-color='grey'] .palette-header i:hover{
+	color: #6C757D;
+}
+[data-default-color='grey'] .palette-colors li::before{
+	border: 2px solid #6C757D;
+}
+/* blue */
+[data-color='blue']{
+	background-color: #087AFC;
+}
+[data-default-color='blue'] .skin-background{
+	background: #087AFC;
+}
+[data-default-color='blue'] .divider{
+	background: #087AFC;
+}
+[data-default-color='blue'] .palette-header i:hover{
+	color: #087AFC;
+}
+[data-default-color='blue'] .palette-colors li::before{
+	border: 2px solid #087AFC;
+}
+/* yellow */
+[data-color='yellow']{
+	background-color: #FFC22B;
+}
+[data-default-color='yellow'] .skin-background{
+	background: #FFC22B;
+}
+[data-default-color='yellow'] .divider{
+	background: #FFC22B;
+}
+[data-default-color='yellow'] .palette-header i:hover{
+	color: #FFC22B;
+}
+[data-default-color='yellow'] .palette-colors li::before{
+	border: 2px solid #FFC22B;
+}
+/* red */
+[data-color='red']{
+	background-color: #DC3E45;
+}
+[data-default-color='red'] .skin-background{
+	background: #DC3E45;
+}
+[data-default-color='red'] .divider{
+	background: #DC3E45;
+}
+[data-default-color='red'] .palette-header i:hover{
+	color: #DC3E45;
+}
+[data-default-color='red'] .palette-colors li::before{
+	border: 2px solid #DC3E45;
+}
+/* dark */
+[data-color='dark']{
+	background-color: #343A40;
+}
+[data-default-color='dark'] .skin-background{
+	background: #343A40;
+}
+[data-default-color='dark'] .divider{
+	background: #343A40;
+}
+[data-default-color='dark'] .palette-header i:hover{
+	color: #343A40;
+}
+[data-default-color='dark'] .palette-colors li::before{
+	border: 2px solid #343A40;
+}
+/* purple */
+[data-color='purple']{
+	background-color: #4D388C;
+}
+[data-default-color='purple'] .skin-background{
+	background: #4D388C;
+}
+[data-default-color='purple'] .divider{
+	background: #4D388C;
+}
+[data-default-color='purple'] .palette-header i:hover{
+	color: #4D388C;
+}
+[data-default-color='purple'] .palette-colors li::before{
+	border: 2px solid #4D388C;
+}
+/* orange */
+[data-color='orange']{
+	background-color: #F86D26;
+}
+[data-default-color='orange'] .skin-background{
+	background: #F86D26;
+}
+[data-default-color='orange'] .divider{
+	background: #F86D26;
+}
+[data-default-color='orange'] .palette-header i:hover{
+	color: #F86D26;
+}
+[data-default-color='orange'] .palette-colors li::before{
+	border: 2px solid #F86D26;
+}
+/* brown */
+[data-color='brown']{
+	background-color: #4F342E;
+}
+[data-default-color='brown'] .skin-background{
+	background: #4F342E;
+}
+[data-default-color='brown'] .divider{
+	background: #4F342E;
+}
+[data-default-color='brown'] .palette-header i:hover{
+	color: #4F342E;
+}
+[data-default-color='brown'] .palette-colors li::before{
+	border: 2px solid #4F342E;
+}
+/* lime */
+[data-color='lime']{
+	background-color: #827717;
+}
+[data-default-color='lime'] .skin-background{
+	background: #827717;
+}
+[data-default-color='lime'] .divider{
+	background: #827717;
+}
+[data-default-color='lime'] .palette-header i:hover{
+	color: #827717;
+}
+[data-default-color='lime'] .palette-colors li::before{
+	border: 2px solid #827717;
+}
